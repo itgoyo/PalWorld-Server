@@ -17,3 +17,14 @@ https://cloud.alongw.cn/f/Byki7/DirectX%E4%BF%AE%E5%A4%8D.zip
 
 4、双击启动服务器.bat
 
+### 方法二
+
+使用Docker来跑幻兽帕鲁的服务器端，好处是可以跨平台
+
+```
+docker pull docker.mirrors.sjtug.sjtu.edu.cn/kagurazakanyaa/palworld
+
+docker run -d --name=palworld-server -v C:\palworld:/opt/palworld/Pal/Saved -p 8211:8211/udp  kagurazakanyaa/palworld
+```
+
+其中:之前的路径，是你想映射文件夹的路径，上面就是我的配置文件目录对应在C盘的的palworld文件夹里面
